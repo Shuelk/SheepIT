@@ -1,2 +1,21 @@
 !nvidia-smi
+#Enter the following in the console of your browser to prevent disconnects: function ClickConnect(){ console.log("Working"); document.querySelector("colab-toolbar-button#connect").click() }setInterval(ClickConnect,60000)
 
+import os
+ 
+os.environ["LD_PRELOAD"] = ""
+ 
+!apt update
+!apt remove libtcmalloc-minimal4
+!apt install libtcmalloc-minimal4
+os.environ["LD_PRELOAD"] = "/usr/lib/x86_64-linux-gnu/libtcmalloc_minimal.so.4.3.0"
+ 
+!echo $LD_PRELOAD
+ 
+!apt install libboost-all-dev
+!apt install libgl1-mesa-dev
+!apt install libglu1-mesa libsm-dev
+!sudo add-apt-repository ppa:thomas-schiex/blender -y
+!sudo apt-get update
+!wget http://sheepit-renderfarm.com/media/applet/client-latest.php -O sheepit.jar
+!java -jar sheepit.jar -login highway999 -password Ky4RhSFABxdM61yKgnE3wRMOcujyGB5EeaW1unMy -ui text -gpu CUDA_0 -compute-method GP
