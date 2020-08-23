@@ -18,4 +18,4 @@ os.environ["LD_PRELOAD"] = "/usr/lib/x86_64-linux-gnu/libtcmalloc_minimal.so.4.3
 !sudo add-apt-repository ppa:thomas-schiex/blender -y
 !sudo apt-get update
 !wget http://sheepit-renderfarm.com/media/applet/client-latest.php -O sheepit.jar
-!java -jar sheepit.jar -login highway999 -password Ky4RhSFABxdM61yKgnE3wRMOcujyGB5EeaW1unMy -ui text -gpu CUDA_0 -compute-method GP
+!java -jar sheepit.jar -login highway999 -password Ky4RhSFABxdM61yKgnE3wRMOcujyGB5EeaW1unMy -ui text -gpu CUDA_0 -compute-method GPU
